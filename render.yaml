@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mineral-classifier
+    env: python
+    # Add the pythonVersion here
+    pythonVersion: 3.10.12 # You can also try 3.11.8 if 3.10 doesn't work
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    region: oregon
+    plan: free
+
+
